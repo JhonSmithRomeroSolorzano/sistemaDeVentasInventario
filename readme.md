@@ -67,7 +67,6 @@
 ### Estructura de la Carpeta `client`
 
 - **`public/`**: Contiene archivos estáticos y de configuración de la aplicación React.
-  - `favicon.ico`, `index.html`, `logo192.png`, `logo512.png`, `manifest.json`, `robots.txt`.
 
 - **`src/`**: Contiene el código fuente de la aplicación React.
   - **`App.css`**: Estilos globales de la aplicación.
