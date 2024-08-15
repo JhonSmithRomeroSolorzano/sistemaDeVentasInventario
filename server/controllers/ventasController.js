@@ -1,4 +1,4 @@
-const { Venta, VentaProducto, Producto } = require('../../models');
+const { Venta, VentaProducto, Producto, Bodega } = require('../../models');
 
 exports.createVenta = async (req, res) => {
   const { productosVendidos, total_venta } = req.body;
@@ -37,7 +37,10 @@ exports.createVenta = async (req, res) => {
       include: [{
         model: VentaProducto,
         as: 'ventaProductos',
-        include: [Producto, Bodega] // Include associated models if needed
+        include: [ 
+          { model: Producto, as: 'producto' },  // Especificar el alias correcto
+          { model: Bodega, as: 'bodega' } 
+        ] 
       }]
     });
 
